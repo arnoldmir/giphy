@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Favorite View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="FavoriteViewController" customModule="GIF_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AD3-Ev-s9K">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C14-WV-qcO">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteGifCollectionViewCell" id="gdZ-k5-X4l" customClass="FavoriteGifCollectionViewCell" customModule="GIF_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75.333333333333343" height="97.333333333333329"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LMi-0u-h0q">
+                                            <rect key="frame" x="0.0" y="0.0" width="75.333333333333343" height="97.333333333333329"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zE8-sz-cmt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="75.333333333333329"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="zE8-sz-cmt" secondAttribute="height" multiplier="1:1" id="aNG-AZ-RbY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-KZ-oHp">
+                                                    <rect key="frame" x="19.333333333333329" y="19.333333333333329" width="37" height="37"/>
+                                                </activityIndicatorView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWv-JG-le0">
+                                                    <rect key="frame" x="10.000000000000004" y="83.333333333333329" width="55.333333333333343" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="06K-E2-5b6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NUN-KZ-oHp" firstAttribute="centerY" secondItem="zE8-sz-cmt" secondAttribute="centerY" id="19d-kV-TwM"/>
+                                                <constraint firstItem="zE8-sz-cmt" firstAttribute="leading" secondItem="LMi-0u-h0q" secondAttribute="leading" id="39L-Xm-ofJ"/>
+                                                <constraint firstItem="nWv-JG-le0" firstAttribute="leading" secondItem="LMi-0u-h0q" secondAttribute="leading" constant="10" id="5SF-ME-hv7"/>
+                                                <constraint firstItem="zE8-sz-cmt" firstAttribute="top" secondItem="LMi-0u-h0q" secondAttribute="top" id="Jc1-Vi-lfQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="nWv-JG-le0" secondAttribute="bottom" id="SX2-5M-BHE"/>
+                                                <constraint firstAttribute="trailing" secondItem="zE8-sz-cmt" secondAttribute="trailing" id="aZ5-MM-o99"/>
+                                                <constraint firstItem="NUN-KZ-oHp" firstAttribute="centerX" secondItem="zE8-sz-cmt" secondAttribute="centerX" id="iXU-DK-Wul"/>
+                                                <constraint firstItem="nWv-JG-le0" firstAttribute="top" secondItem="zE8-sz-cmt" secondAttribute="bottom" constant="8" id="oKE-mp-vOI"/>
+                                                <constraint firstAttribute="trailing" secondItem="nWv-JG-le0" secondAttribute="trailing" constant="10" id="wzB-ZM-Qdd"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="NUN-KZ-oHp" id="lhe-KR-kyw"/>
+                                            <outlet property="gifImageView" destination="zE8-sz-cmt" id="Tor-pN-57n"/>
+                                            <outlet property="gifTitleLabel" destination="nWv-JG-le0" id="xHx-rq-n17"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="3pq-iP-2ax"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="fVp-ce-6Dc"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's nothing here yet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kle-sQ-dab">
+                                <rect key="frame" x="97" y="412" width="196" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AD3-Ev-s9K" secondAttribute="trailing" id="4aM-Zi-p9Q"/>
+                            <constraint firstItem="AD3-Ev-s9K" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="EZl-zK-TDW"/>
+                            <constraint firstItem="Kle-sQ-dab" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="MUH-rq-vwg"/>
+                            <constraint firstItem="Kle-sQ-dab" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QmE-B6-Vvj"/>
+                            <constraint firstItem="AD3-Ev-s9K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kPz-b5-1HA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AD3-Ev-s9K" secondAttribute="bottom" id="lk0-li-24t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyLabel" destination="Kle-sQ-dab" id="aka-QB-jHX"/>
+                        <outlet property="favoriteGifCollectionView" destination="AD3-Ev-s9K" id="S7W-7A-zbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35.384615384615387" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+</document>

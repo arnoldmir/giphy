@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wJx-LA-Wse">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Trending View Controller-->
+        <scene sceneID="cno-5V-fQ1">
+            <objects>
+                <viewController id="wJx-LA-Wse" customClass="TrendingViewController" customModule="GIF_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZw-g1-Iec">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's nothing here yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdn-GF-FW2">
+                                <rect key="frame" x="97" y="412" width="196" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2My-xT-z9C">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uV7-Vv-5BL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCollectionViewCell" id="uK2-lh-TmB" customClass="GifCollectionViewCell" customModule="GIF_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75.333333333333343" height="97.333333333333329"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pO8-Ex-vjF">
+                                            <rect key="frame" x="0.0" y="0.0" width="75.333333333333343" height="97.333333333333329"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcR-XK-Zqv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="75.333333333333329"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gcR-XK-Zqv" secondAttribute="height" multiplier="1:1" id="1qA-XO-Ixr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-iK-gyk">
+                                                    <rect key="frame" x="19.333333333333329" y="19.333333333333329" width="37" height="37"/>
+                                                </activityIndicatorView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujh-Dd-HGs">
+                                                    <rect key="frame" x="10.000000000000004" y="83.333333333333329" width="55.333333333333343" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="eLY-Cx-Ifo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Ujh-Dd-HGs" secondAttribute="bottom" id="HsP-m3-82K"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ujh-Dd-HGs" secondAttribute="trailing" constant="10" id="Lle-TE-u1i"/>
+                                                <constraint firstItem="Ujh-Dd-HGs" firstAttribute="leading" secondItem="pO8-Ex-vjF" secondAttribute="leading" constant="10" id="U1k-if-arf"/>
+                                                <constraint firstAttribute="trailing" secondItem="gcR-XK-Zqv" secondAttribute="trailing" id="Ybg-ch-K2V"/>
+                                                <constraint firstItem="dgg-iK-gyk" firstAttribute="centerX" secondItem="gcR-XK-Zqv" secondAttribute="centerX" id="hrl-TO-kmX"/>
+                                                <constraint firstItem="gcR-XK-Zqv" firstAttribute="top" secondItem="pO8-Ex-vjF" secondAttribute="top" id="pzZ-nL-lOh"/>
+                                                <constraint firstItem="dgg-iK-gyk" firstAttribute="centerY" secondItem="gcR-XK-Zqv" secondAttribute="centerY" id="qiw-id-ih5"/>
+                                                <constraint firstItem="gcR-XK-Zqv" firstAttribute="leading" secondItem="pO8-Ex-vjF" secondAttribute="leading" id="sBH-gK-vDP"/>
+                                                <constraint firstItem="Ujh-Dd-HGs" firstAttribute="top" secondItem="gcR-XK-Zqv" secondAttribute="bottom" constant="8" id="sBZ-vy-3QS"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="dgg-iK-gyk" id="c2k-kL-87l"/>
+                                            <outlet property="gifImageView" destination="gcR-XK-Zqv" id="fmP-6v-9OR"/>
+                                            <outlet property="gifTitleLabel" destination="Ujh-Dd-HGs" id="DTZ-tx-qGU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wJx-LA-Wse" id="4hQ-JV-QPS"/>
+                                    <outlet property="delegate" destination="wJx-LA-Wse" id="QXL-mm-3JJ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fUW-oK-0gq"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2My-xT-z9C" firstAttribute="leading" secondItem="fUW-oK-0gq" secondAttribute="leading" id="2c0-Li-kpu"/>
+                            <constraint firstItem="fUW-oK-0gq" firstAttribute="trailing" secondItem="2My-xT-z9C" secondAttribute="trailing" id="7Xe-tS-WwU"/>
+                            <constraint firstItem="Sdn-GF-FW2" firstAttribute="centerX" secondItem="sZw-g1-Iec" secondAttribute="centerX" id="GfS-ED-Ybu"/>
+                            <constraint firstItem="2My-xT-z9C" firstAttribute="top" secondItem="sZw-g1-Iec" secondAttribute="top" id="I6v-X3-HBO"/>
+                            <constraint firstItem="Sdn-GF-FW2" firstAttribute="centerY" secondItem="sZw-g1-Iec" secondAttribute="centerY" id="V9v-9H-tjp"/>
+                            <constraint firstItem="fUW-oK-0gq" firstAttribute="bottom" secondItem="2My-xT-z9C" secondAttribute="bottom" id="Zmt-ix-c0A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyLabel" destination="Sdn-GF-FW2" id="ZCD-6L-baR"/>
+                        <outlet property="gifCollectionView" destination="2My-xT-z9C" id="dTs-7g-WUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yC2-C1-l3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3.0769230769230766" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+</document>

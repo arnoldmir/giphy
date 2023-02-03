@@ -1,0 +1,101 @@
+# SwiftLint.yml version 1.0.0
+
+# Paths to include during linting. `--path` is ignored if present.
+
+included:
+    - GIF!       # The name should be without brackets
+
+# Paths to ignore during linting. Takes precedence over `included`.
+
+excluded:
+    - Pods                  # Only if contains in project
+    - Carthage
+    - Source/ExcludedFolder
+    - Source/ExcludedFile.swift
+
+# Rule identifiers turned on by default to exclude from running.
+
+disabled_rules:
+    - multiple_closures_with_trailing_closure
+    - nesting
+    - cyclomatic_complexity
+
+# Some rules are turned off by default, so you need to opt-in.
+
+opt_in_rules:
+    - sorted_imports
+    - empty_count
+    - empty_string
+    - empty_collection_literal
+    - private_outlet
+    - private_action
+    - overridden_super_call
+    - force_unwrapping
+    - implicitly_unwrapped_optional
+    - redundant_type_annotation
+    - weak_delegate
+    - closure_end_indentation
+    - closure_spacing
+    - collection_alignment
+    - contains_over_filter_count
+    - contains_over_filter_is_empty
+    - contains_over_first_not_nil
+    - contains_over_range_nil_comparison
+    - explicit_self
+    - fallthrough
+    - fatal_error_message
+    - file_name_no_space
+    - first_where
+    - identical_operands
+    - let_var_whitespace
+    - literal_expression_end_indentation
+    - multiline_arguments
+    - multiline_function_chains
+    - multiline_parameters
+    - operator_usage_whitespace
+    - prefer_zero_over_explicit_init
+    - unneeded_parentheses_in_closure_argument
+    - unowned_variable_capture
+    - unused_declaration
+    - unused_import
+    - vertical_parameter_alignment_on_call
+    - vertical_whitespace_closing_braces
+    - xct_specific_matcher
+    - yoda_condition
+
+# Custom configurations
+
+identifier_name:
+    min_length: 2
+    max_length:
+        warning: 50
+        error: 55
+
+type_name:
+    min_length: 3
+    max_length:
+        warning: 60
+        error: 80
+
+function_parameter_count:
+    warning: 11
+    error: 15
+    ignores_default_parameters: true
+
+function_body_length:
+    warning: 70
+    error: 120
+
+file_length:
+    warning: 1000
+    error: 1200
+    ignore_comment_only_lines: true
+
+type_body_length: 300
+
+multiline_arguments:
+    only_enforce_after_first_closure_on_first_line: true
+
+# Reporter type (xcode, json, csv, checkstyle, html, markdown)
+
+reporter: xcode
